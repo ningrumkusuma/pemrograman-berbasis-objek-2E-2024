@@ -54,29 +54,29 @@ public class Murid {
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Masukkan nama: ");
+            String nameInput = scanner.nextLine();
+            System.out.print("Masukkan NIM: ");
+            String nimInput = scanner.nextLine();
+            System.out.print("Masukkan departemen: ");
+            String departmentInput = scanner.nextLine();
+            System.out.print("Masukkan nama jalan: ");
+            String streetInput = scanner.nextLine();
+            System.out.print("Masukkan kota: ");
+            String cityInput = scanner.nextLine();
+            System.out.print("Masukkan provinsi: ");
+            String stateInput = scanner.nextLine();
+            
+            // Membuat objek Address dengan input pengguna
+            Address studentAddress = new Address(streetInput, cityInput, stateInput);
 
-        System.out.print("Masukkan nama: ");
-        String nameInput = scanner.nextLine();
-        System.out.print("Masukkan NIM: ");
-        String nimInput = scanner.nextLine();
-        System.out.print("Masukkan departemen: ");
-        String departmentInput = scanner.nextLine();
-        System.out.print("Masukkan nama jalan: ");
-        String streetInput = scanner.nextLine();
-        System.out.print("Masukkan kota: ");
-        String cityInput = scanner.nextLine();
-        System.out.print("Masukkan provinsi: ");
-        String stateInput = scanner.nextLine();
-        
-        // Membuat objek Address dengan input pengguna
-        Address studentAddress = new Address(streetInput, cityInput, stateInput);
+            // Membuat objek Murid dengan input pengguna
+            Murid student = new Murid(nameInput, nimInput, departmentInput, studentAddress);
 
-        // Membuat objek Murid dengan input pengguna
-        Murid student = new Murid(nameInput, nimInput, departmentInput, studentAddress);
-
-        // Menampilkan detail murid
-        student.display();
+            // Menampilkan detail murid
+            student.display();
+        }
     }
 }
 
