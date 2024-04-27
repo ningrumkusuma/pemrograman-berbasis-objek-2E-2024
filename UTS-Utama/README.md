@@ -1,4 +1,4 @@
-#F ORMAT PENGUMPULAN DAN PENAMAAN FOLDER
+# FORMAT PENGUMPULAN DAN PENAMAAN FOLDER
 
 Buatlah folder nim-nama pada folder ini.
 
